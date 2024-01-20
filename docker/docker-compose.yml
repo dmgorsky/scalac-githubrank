@@ -1,0 +1,21 @@
+version: "3"
+services:
+  backend:
+    image: scalac-githubrank:0.1.0-SNAPSHOT<localBuild>
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    ports:
+      - "8080:8080"
+    networks:
+      - back-tier
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/docs" ]
+      interval: 10s
+      timeout: 3s
+      retries: 30
+      start_period: 5s
+
+
+networks:
+  # The presence of these objects is sufficient to define them
+  back-tier: { }
