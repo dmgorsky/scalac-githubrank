@@ -46,3 +46,5 @@ $ set GH_TOKEN <gh._...> sbt run
 [info] INFO  o.h.e.s.EmberServerBuilderCompanionPlatform - Ember-Server service bound to address: [::]:8080
 [info] Go to http://localhost:8080/docs to open SwaggerUI. Press ENTER key to exit.
 ```
+
+similar solution in Rust: [rust-gthubrank](https://github.com/dmgorsky/rust-githubrank)
